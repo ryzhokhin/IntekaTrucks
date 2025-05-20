@@ -15,10 +15,28 @@ export default function ContactForm() {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Contact Form Submitted:", formData);
-        alert("Thank you! We'll be in touch soon.");
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (res.ok) {
+                alert("✅ Your message has been sent!");
+                setFormData({ name: "", phone: "", email: "", message: "" });
+            } else {
+                alert("❌ Something went wrong. Try again later.");
+            }
+        } catch (err) {
+            console.error(err);
+            alert("🚨 Network error.");
+        }
     };
 
     return (
