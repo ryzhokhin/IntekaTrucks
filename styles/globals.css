@@ -4,37 +4,106 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --background: #ffffff;
-    --foreground: #171717;
+@theme {
+    --color-primary: #1e3a8a;
+    --color-secondary: #3b82f6;
+    --color-accent: #e11d48;
+    --color-muted: #6b7280;
+    --color-background: #ffffff;
+    --color-section: #f9fafb;
+    --color-foreground: #171717;
 }
 
-@theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+@layer base {
+    [data-theme='first-choice']{
+        --color-primary: #1e3a8a;
+        --color-secondary: #3b82f6;
+        --color-accent: #1e3a8a;
+        --color-muted: #6b7280;
+        --color-background: #ffffff;
+        --color-section: #f9fafb;
+        --color-foreground: #171717;
+    }
+    [data-theme='navy-sand'] {
+        --color-primary: #0f172a;
+        --color-secondary: #facc15;
+        --color-accent: #eab308;
+        --color-muted: #64748b;
+        --color-background: #f9fafb;
+        --color-section: #f3f4f6;
+        --color-foreground: #1e293b;
+    }
+    [data-theme='cool-gray-sky'] {
+        --color-primary: #334155;
+        --color-secondary: #38bdf8;
+        --color-accent: #0ea5e9;
+        --color-muted: #94a3b8;
+        --color-background: #f8fafc;
+        --color-section: #e2e8f0;
+        --color-foreground: #0f172a;
+    }
+    [data-theme='cargo-olive-asphalt'] {
+        --color-primary: #374151;
+        --color-secondary: #d1fae5;
+        --color-accent: #65a30d;
+        --color-muted: #9ca3af;
+        --color-background: #fefce8;
+        --color-section: #f3f4f6;
+        --color-foreground: #1f2937;
+    }
+    [data-theme='sunset-freight'] {
+        --color-primary: #1e293b;
+        --color-secondary: #fcd34d;
+        --color-accent: #fb923c;
+        --color-muted: #cbd5e1;
+        --color-background: #fff7ed;
+        --color-section: #fef3c7;
+        --color-foreground: #111827;
+    }
+    [data-theme='midnight-emerald'] {
+        --color-primary: #0f172a;
+        --color-secondary: #10b981;
+        --color-accent: #22d3ee;
+        --color-muted: #64748b;
+        --color-background: #020617;
+        --color-section: #1e293b;
+        --color-foreground: #f1f5f9;
+    }
+    [data-theme='eco-green'] {
+        --color-primary: #14532d;       /* Тёмно-зелёный */
+        --color-secondary: #22c55e;     /* Лайм зелёный */
+        --color-accent: #facc15;        /* Жёлтый */
+        --color-muted: #64748b;         /* Слейт */
+        --color-background: #f0fdf4;    /* Светло-зелёный фон */
+        --color-section: #ecfdf5;       /* Ещё мягче секции */
+        --color-foreground: #1f2937;    /* Тёмно-серый текст */
+    }
+    [data-theme='premium-blue'] {
+        --color-primary: #0f172a;       /* Тёмно-синий */
+        --color-secondary: #3b82f6;     /* Акцент */
+        --color-accent: #073260;        /* Голубой CTA */
+        --color-muted: #9ca3af;         /* Серый */
+        --color-background: #f8fafc;    /* Холодный белый */
+        --color-section: #e2e8f0;       /* Светло-серый */
+        --color-foreground: #0f172a;    /* Основной текст */
+    }
 }
 
-/*@media (prefers-color-scheme: dark) {*/
-/*    :root {*/
-/*        --background: #0a0a0a;*/
-/*        --foreground: #ededed;*/
-/*    }*/
-/*}*/
 
+
+/* === Base Styling === */
 body {
-    background: var(--background);
-    color: var(--foreground);
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.slick-prev:before, .slick-next:before {
-    color: #1e293b !important; /* Tailwind slate-800 */
-    font-size: 32px;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #1e293b !important;
+    font-size: 32px;
 }

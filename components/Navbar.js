@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Navbar() {
     return (
-        <nav className="bg-white shadow-md sticky top-0 z-50">
+        <nav className="bg-background shadow-md sticky top-0 z-50">
             <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center px-6 py-3 sm:py-4">
 
                 {/* Logo Image */}
@@ -19,27 +19,27 @@ export default function Navbar() {
 
                 {/* Navigation */}
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-                    <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium text-sm sm:text-base">
+                    <a href="#about" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
                         About
                     </a>
-                    <a href="#servicesoverview"
-                       className="text-gray-700 hover:text-blue-600 font-medium text-sm sm:text-base">
+                    <a href="#servicesoverview" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
                         What We Do
                     </a>
-                    <a href="#testimonials"
-                       className="text-gray-700 hover:text-blue-600 font-medium text-sm sm:text-base">
+                    <a href="#testimonials" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
                         Testimonials
                     </a>
-                    <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium text-sm sm:text-base">
+                    <a href="#contact" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
                         Contact
                     </a>
-                    <Link href="/services"
-                          className="text-blue-900 hover:text-blue-600 font-medium text-sm sm:text-base">
+                    <Link href="/services/#CTO" className="text-primary hover:text-accent font-medium text-sm sm:text-base">
+                        CTO
+                    </Link>
+                    <Link href="/services" className="text-primary hover:text-accent font-medium text-sm sm:text-base">
                         All Services
                     </Link>
                     <a
                         href="tel:+13101234567"
-                        className="bg-blue-600 text-white font-semibold text-sm sm:text-base py-2 px-4 rounded-md hover:bg-blue-700 transition"
+                        className="bg-accent text-background font-semibold text-sm sm:text-base py-2 px-4 rounded-md hover:opacity-90 transition"
                     >
                         📞 Call Now
                     </a>

@@ -2,29 +2,36 @@ import { FaShieldAlt, FaUsers, FaAward } from "react-icons/fa";
 
 export default function About() {
     return (
-        <section className="bg-gray-100 py-16 scroll-mt-24" id="about">
-            <div className="max-w-6xl mx-auto px-6 text-center">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">About INTEKA</h2>
+        <section
+            className="relative bg-cover bg-center bg-no-repeat py-16 scroll-mt-24"
+            style={{ backgroundImage: "url('/images/about-bg-2.jpg')" }} // 🔁 Подставь свой путь
+            id="about"
+        >
+            {/* Полупрозрачный оверлей */}
+            <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-0" />
 
-                {/* Карточки — увеличены, с анимацией и адаптивностью */}
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8">
+            <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+                <h2 className="text-3xl font-bold text-foreground mb-6">About INTEKA</h2>
+
+                {/* Иконки карточек */}
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mb-10">
                     {[
-                        { icon: <FaAward className="text-blue-600 text-4xl mb-3" />, label: "10+ Years Experience" },
-                        { icon: <FaShieldAlt className="text-blue-600 text-4xl mb-3" />, label: "Certified & Insured" },
-                        { icon: <FaUsers className="text-blue-600 text-4xl mb-3" />, label: "Family-Owned Business" },
+                        { icon: <FaAward className="text-primary text-4xl mb-3" />, label: "10+ Years Experience" },
+                        { icon: <FaShieldAlt className="text-primary text-4xl mb-3" />, label: "Certified & Insured" },
+                        { icon: <FaUsers className="text-primary text-4xl mb-3" />, label: "Family-Owned Business" },
                     ].map((item, index) => (
                         <div
                             key={index}
-                            className="flex flex-col items-center p-6 sm:p-8 rounded-xl transition duration-300 hover:bg-white hover:shadow-lg transform hover:-translate-y-1 w-full sm:w-auto text-center"
+                            className="flex flex-col items-center p-6 sm:p-8 rounded-xl bg-background transition duration-300 hover:shadow-md transform hover:-translate-y-1 w-full sm:w-auto text-center"
                         >
                             {item.icon}
-                            <p className="text-gray-800 font-semibold text-base sm:text-lg mt-2">{item.label}</p>
+                            <p className="text-muted font-semibold text-base sm:text-lg mt-2">{item.label}</p>
                         </div>
                     ))}
                 </div>
 
-                {/* Текстовый блок с уменьшенным межстрочным интервалом */}
-                <div className="max-w-2xl mx-auto mb-12 space-y-2 text-gray-700 text-lg leading-snug">
+                {/* Описание */}
+                <div className="max-w-2xl mx-auto text-gray-700 text-lg leading-relaxed space-y-3">
                     <p>
                         Over the years, we’ve gained valuable experience and earned the trust of our clients.
                     </p>
@@ -35,8 +42,6 @@ export default function About() {
                         Our team ensures every order is handled with professionalism, precision, and personal care.
                     </p>
                 </div>
-
-
             </div>
         </section>
     );
