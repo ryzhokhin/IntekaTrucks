@@ -21,9 +21,9 @@ export default function NavbarServices() {
 
                 {/* Navigation */}
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-                    <a href="/" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
+                    <Link href="/" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
                         Who we are
-                    </a>
+                    </Link>
                     <a href="#logistics" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
                         Freight & Logistics Services
                     </a>
