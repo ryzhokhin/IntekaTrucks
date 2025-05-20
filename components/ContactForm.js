@@ -32,6 +32,7 @@ export default function ContactForm() {
                 setFormData({ name: "", phone: "", email: "", message: "" });
             } else {
                 alert("❌ Something went wrong. Try again later.");
+                console.log(res.data);
             }
         } catch (err) {
             console.error(err);
