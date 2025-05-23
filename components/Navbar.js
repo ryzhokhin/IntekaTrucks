@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import LogoInteka from "../public/images/inteka-logo-1.svg"
 
 export default function Navbar() {
     return (
@@ -8,13 +9,7 @@ export default function Navbar() {
 
                 {/* Logo Image */}
                 <div className="relative h-12 w-[160px]">
-                    <Image
-                        src="/images/logo-inteka.png"
-                        alt="INTEKA Logo"
-                        fill
-                        className="object-contain"
-                        priority
-                    />
+                    <LogoInteka className="h-full w-full object-contain" />
                 </div>
 
                 {/* Navigation */}
