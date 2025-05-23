@@ -8,8 +8,14 @@ export default function Navbar() {
             <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center px-6 py-3 sm:py-4">
 
                 {/* Logo Image */}
-                <div className="relative h-12 w-[160px]">
-                    <LogoInteka className="h-full w-full object-contain" />
+                <div className="relative h-16 w-[200px] sm:h-20 sm:w-[240px]">
+                    <Image
+                        src="/images/inteka-logo-1.svg"
+                        alt="INTEKA Logo"
+                        fill
+                        className="object-contain"
+                        priority
+                    />
                 </div>
 
                 {/* Navigation */}
