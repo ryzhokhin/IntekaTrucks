@@ -10,7 +10,7 @@ export default function NavbarServices() {
                 <div className="relative h-16 w-[200px] sm:h-20 sm:w-[240px]">
                     <Link href="/">
                     <Image
-                        src="/images/inteka-logo-1.svg"
+                        src="/images/inteka-logo-2-edited.svg"
                         alt="INTEKA Logo"
                         fill
                         className="object-contain"
