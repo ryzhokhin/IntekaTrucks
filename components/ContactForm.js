@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
@@ -7,6 +7,10 @@ export default function ContactForm() {
         email: "",
         message: "",
     });
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [showSuccess, setShowSuccess] = useState(false);
+    const [showError, setShowError] = useState(false);
 
     const handleChange = (e) => {
         setFormData((prev) => ({
@@ -17,34 +21,47 @@ export default function ContactForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
+        setShowSuccess(false);
+        setShowError(false);
 
         try {
             const res = await fetch("/api/contact", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
             });
 
             if (res.ok) {
-                alert("✅ Your message has been sent!");
+                setShowSuccess(true);
                 setFormData({ name: "", phone: "", email: "", message: "" });
             } else {
-                alert("❌ Something went wrong. Try again later.");
-                console.log(res.data);
+                setShowError(true);
             }
         } catch (err) {
             console.error(err);
-            alert("🚨 Network error.");
+            setShowError(true);
+        } finally {
+            setIsLoading(false);
         }
     };
+
+    // Hide success message after 4 seconds
+    useEffect(() => {
+        if (showSuccess || showError) {
+            const timer = setTimeout(() => {
+                setShowSuccess(false);
+                setShowError(false);
+            }, 4000);
+            return () => clearTimeout(timer);
+        }
+    }, [showSuccess, showError]);
 
     return (
         <section className="bg-background py-20 scroll-mt-24" id="contact">
             <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-                {/* Left: Visual Block */}
+                {/* Left: Visual */}
                 <div className="hidden md:block">
                     <img
                         src="/images/contact-agent.jpg"
@@ -54,13 +71,14 @@ export default function ContactForm() {
                 </div>
 
                 {/* Right: Form */}
-                <div className="bg-background rounded-xl shadow-lg p-8">
+                <div className="bg-background rounded-xl shadow-lg p-8 relative">
                     <h2 className="text-3xl font-bold text-foreground mb-4">Request a Quote</h2>
                     <p className="text-muted mb-6">
                         Our team responds fast. Let us know your needs — we’ll handle the rest.
                     </p>
 
-                    <form onSubmit={handleSubmit} className="space-y-5">
+                    <form onSubmit={handleSubmit} className="space-y-5 relative">
+
                         <input
                             type="text"
                             name="name"
@@ -100,11 +118,35 @@ export default function ContactForm() {
 
                         <button
                             type="submit"
+                            disabled={isLoading}
                             className="w-full bg-accent hover:opacity-90 text-background font-semibold py-3 px-6 rounded-lg transition"
                         >
-                            Send Message
+                            {isLoading ? "Sending..." : "Send Message"}
                         </button>
+
+                        {/* Loading Spinner */}
+                        {isLoading && (
+                            <div className="absolute right-5 bottom-6 animate-spin h-5 w-5 border-2 border-t-transparent border-accent rounded-full" />
+                        )}
                     </form>
+
+                    {/* Success Toast */}
+                    {showSuccess && (
+                        <div className="absolute bottom-[-100px] left-0 right-0 flex justify-center animate-fade-in-up">
+                            <div className="bg-green-100 text-green-800 px-6 py-3 rounded-lg shadow-lg flex items-center gap-2">
+                                ✅ Thank you! Your message has been sent. We’ll be in touch soon.
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Error Toast */}
+                    {showError && (
+                        <div className="absolute bottom-[-100px] left-0 right-0 flex justify-center animate-fade-in-up">
+                            <div className="bg-red-100 text-red-800 px-6 py-3 rounded-lg shadow-lg flex items-center gap-2">
+                                ❌ Something went wrong. Please try again later.
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
