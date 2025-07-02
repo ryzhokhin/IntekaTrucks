@@ -11,8 +11,8 @@ export default async function handler(req, res) {
 
     try {
         const data = await resend.emails.send({
-            from: 'INTEKA <noreply@yourdomain.com>', // replace with verified domain
-            to: ['your@email.com'], // replace with your destination email
+            from: 'INTEKA <noreply@inteka.pl>', // replace with verified domain
+            to: ['dan.ryzhokhin@gmail.com'], // replace with your destination email
             subject: `New Quote Request from ${name}`,
             html: `
         <h2>New Contact Form Submission</h2>
