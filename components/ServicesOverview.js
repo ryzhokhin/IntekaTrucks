@@ -5,7 +5,7 @@ export default function ServicesOverview() {
     return (
         <section className="bg-background py-16 scroll-mt-24" id="servicesoverview">
             <div className="max-w-6xl mx-auto px-6 text-center">
-                <h2 className="text-3xl font-bold text-foreground mb-4">What We Do</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">Nasza oferta</h2>
                 <p className="text-lg text-muted mb-12 max-w-3xl mx-auto">
                     Our core services are designed to keep your cargo moving efficiently and safely — from international freight to real-time logistics and full truck diagnostics.
                 </p>

@@ -27,23 +27,23 @@ export default function HeroSplit() {
                 style={{ x: slideX }}
             >
                 <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 leading-tight">
-                    Freight & Logistics Solutions That Deliver
+                    Kompleksowe Rozwiązania Logistyczne dla Firm
                 </h1>
                 <p className="text-lg text-muted mb-8">
-                    Since 2011 — Fast. Reliable. Customized to your business needs.
+                    Dostarczamy niezawodne usługi od 2011 roku – szybko, precyzyjnie i zgodnie z Twoimi potrzebami.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                    <a
-                        href="tel:+13101234567"
-                        className="bg-accent hover:opacity-90 text-background font-semibold py-3 px-6 rounded-lg text-center transition"
-                    >
-                        📞 Call
-                    </a>
+                    {/*<a*/}
+                    {/*    href="tel:+13101234567"*/}
+                    {/*    className="bg-accent hover:opacity-90 text-background font-semibold py-3 px-6 rounded-lg text-center transition"*/}
+                    {/*>*/}
+                    {/*    📞 Zadzwoń*/}
+                    {/*</a>*/}
                     <a
                         href="#contact"
                         className="border border-accent text-accent hover:bg-section font-semibold py-3 px-6 rounded-lg text-center transition"
                     >
-                        📝 Get a quote
+                        📞 Skontaktuj Się Z Nami
                     </a>
                 </div>
             </motion.div>

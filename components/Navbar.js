@@ -21,28 +21,28 @@ export default function Navbar() {
                 {/* Navigation */}
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                     <a href="#about" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
-                        About
+                        O Nas
                     </a>
                     <a href="#servicesoverview" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
-                        What We Do
+                        Oferta
                     </a>
-                    <a href="#testimonials" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
-                        Testimonials
-                    </a>
+                    {/*<a href="#testimonials" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">*/}
+                    {/*    Testimonials*/}
+                    {/*</a>*/}
                     <a href="#contact" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
                         Contact
                     </a>
                     <Link href="/services/#CTO" className="text-primary hover:text-accent font-medium text-sm sm:text-base">
-                        CTO
+                        Serwis
                     </Link>
                     <Link href="/services" className="text-primary hover:text-accent font-medium text-sm sm:text-base">
-                        All Services
+                        Wszystkie usługi
                     </Link>
                     <a
-                        href="tel:+13101234567"
+                        href="#contact"
                         className="bg-accent text-background font-semibold text-sm sm:text-base py-2 px-4 rounded-md hover:opacity-90 transition"
                     >
-                        📞 Call Now
+                        📞 Skontaktuj Sie Z Nami
                     </a>
                 </div>
             </div>

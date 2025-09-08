@@ -11,14 +11,14 @@ export default function About() {
             <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-0" />
 
             <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-                <h2 className="text-3xl font-bold text-foreground mb-6">About INTEKA</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">O Naszej Firmie</h2>
 
                 {/* Иконки карточек */}
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mb-10">
                     {[
-                        { icon: <FaAward className="text-primary text-4xl mb-3" />, label: "10+ Years Experience" },
-                        { icon: <FaShieldAlt className="text-primary text-4xl mb-3" />, label: "Certified & Insured" },
-                        { icon: <FaUsers className="text-primary text-4xl mb-3" />, label: "Family-Owned Business" },
+                        { icon: <FaAward className="text-primary text-4xl mb-3" />, label: "Ponad 10 lat doświadczenia" },
+                        { icon: <FaShieldAlt className="text-primary text-4xl mb-3" />, label: "Zaufany partner biznesowy" },
+                        { icon: <FaUsers className="text-primary text-4xl mb-3" />, label: "Rodzinne przedsiębiorstwo" },
                     ].map((item, index) => (
                         <div
                             key={index}
@@ -33,13 +33,16 @@ export default function About() {
                 {/* Описание */}
                 <div className="max-w-2xl mx-auto text-gray-700 text-lg leading-relaxed space-y-3">
                     <p>
-                        Over the years, we’ve gained valuable experience and earned the trust of our clients.
+                        Nasza firma transportowa istnieje na rynku od 2011 roku.
                     </p>
                     <p>
-                        We provide both domestic and international transport services.
+                        Przez ten czas zdobyliśmy już doświadczenie i zaufanie naszych klientów.
                     </p>
                     <p>
-                        Our team ensures every order is handled with professionalism, precision, and personal care.
+                        Dostarczamy Państwu usługi w zakresie transportu krajowego oraz międzynarodowego.
+                    </p>
+                    <p>
+                        Gwarantujemy indywidualne podejście do każdego klienta, profesjonalną, niezawodną i terminową realizację zleceń transportowych.
                     </p>
                 </div>
             </div>
