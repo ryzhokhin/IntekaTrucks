@@ -74,12 +74,12 @@ export default function ServicesPage() {
                             </div>
                             <h3 className="text-2xl font-bold text-foreground mb-3">Freight Delivery</h3>
                             <p className="text-base sm:text-lg text-muted mb-4 leading-relaxed">
-                                We handle transportation across the U.S. and to Eastern Europe — Ukraine, Belarus, and Russia — with a tailored approach to every cargo type and route.
+                                {/*We handle transportation across the U.S. and to Eastern Europe — Ukraine, Belarus, and Russia — with a tailored approach to every cargo type and route.*/}
                             </p>
                             <ul className="list-disc list-inside text-base text-muted space-y-1">
-                                <li>Dry van, flatbed, reefer available</li>
-                                <li>Local and long-haul delivery</li>
-                                <li>Live GPS tracking & dispatch coordination</li>
+                                {/*<li>Dry van, flatbed, reefer available</li>*/}
+                                {/*<li>Local and long-haul delivery</li>*/}
+                                {/*<li>Live GPS tracking & dispatch coordination</li>*/}
                             </ul>
                             <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover:opacity-100 transition" />
                         </div>
