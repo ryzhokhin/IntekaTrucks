@@ -34,7 +34,7 @@ export default function Footer() {
                     <ul className="text-sm space-y-2 text-muted">
                         <li>📍 Ul. Herberta 3A,
                             59-700 Boleslawiec</li>
-                        <li>📞 +1 (310) 123-4567</li>
+                        {/*<li>📞 +1 (310) 123-4567</li>*/}
                         <li>✉️ biuro@inteka.pl</li>
                     </ul>
                 </div>
