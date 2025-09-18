@@ -32,9 +32,10 @@ export default function Footer() {
                 <div>
                     <h4 className="text-background font-semibold mb-3">Contact</h4>
                     <ul className="text-sm space-y-2 text-muted">
-                        <li>📍 Los Angeles, CA</li>
+                        <li>📍 Ul. Herberta 3A,
+                            59-700 Boleslawiec</li>
                         <li>📞 +1 (310) 123-4567</li>
-                        <li>✉️ info@inteka.com</li>
+                        <li>✉️ biuro@inteka.pl</li>
                     </ul>
                 </div>
 
