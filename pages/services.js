@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
-import { FaClipboardCheck, FaOilCan, FaRoad, FaTools, FaWrench } from "react-icons/fa";
+import { FaClipboardCheck, FaOilCan, FaRoad, FaTools, FaWrench, FaSnowflake, FaTire } from "react-icons/fa";
 import Footer from "@/components/Footer";
 import NavbarServices from "@/components/NavbarServices";
 import { useEffect, useState } from "react";
@@ -29,10 +29,10 @@ export default function ServicesPage() {
                         viewport={{ once: true }}
                     >
                         <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-                            Our Services
+                            Co oferujemy?
                         </h1>
                         <p className="text-lg sm:text-xl text-muted leading-relaxed">
-                            From freight delivery to smart logistics planning and full truck servicing — we’re built to move your business with speed, safety, and precision.
+                            Od transportu ładunków, przez inteligentne planowanie logistyki, aż po kompleksowy serwis ciężarówek — działamy, aby Twoja firma mogła się poruszać szybko, bezpiecznie i precyzyjnie.
                         </p>
                     </motion.div>
 
@@ -129,7 +129,7 @@ export default function ServicesPage() {
                         className="flex flex-col justify-center px-6 md:px-12 py-10 md:py-16 max-w-2xl mx-auto"
                     >
                         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                            Truck Service & Maintenance (СТО)
+                            Serwis i Obsługa
                         </h2>
 
                         <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4">
@@ -137,34 +137,35 @@ export default function ServicesPage() {
                         </h3>
 
                         <p className="text-muted mb-5 leading-relaxed text-base sm:text-lg">
-                            Our <span className="font-medium text-accent">certified mechanics</span> provide diagnostics and repairs for heavy-duty and semi-trucks. We maintain <span className="text-accent font-medium">all major makes and models</span>.
+                            Nasi <span className="font-medium text-accent">certyfikowani mechanicy</span> wykonują diagnostykę i naprawy pojazdów ciężarowych, <span className="text-accent font-medium">naczep oraz samochodów osobowych.</span>.
                         </p>
 
                         <ul className="space-y-3 text-base text-muted mb-6">
                             <li className="flex items-start gap-3">
                                 <FaOilCan className="text-accent mt-1" />
-                                <span><strong>Oil & fluid changes</strong> for all vehicle systems</span>
+                                <span><strong>Wymiana oleju i płynów eksploatacyjnych</strong> dla wszystkich układów pojazdu</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <FaTools className="text-accent mt-1" />
-                                <span><strong>Brake, suspension & transmission repairs</strong> — on-site</span>
+                                <span><strong>Naprawy hamulców, zawieszenia i skrzyni biegów</strong> — na miejscu</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <FaWrench className="text-accent mt-1" />
-                                <span><strong>Engine diagnostics & electrical troubleshooting</strong></span>
+                                <span><strong>Komputerowa diagnostyka</strong> wszystkich układów</span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <FaRoad className="text-accent mt-1" />
-                                <span><strong>Mobile service & roadside repairs</strong></span>
+                                <FaSnowflake className="text-accent mt-1" />
+                                <span><strong>Serwis i naprawa</strong> układów klimatyzacji oraz Webasto</span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <FaClipboardCheck className="text-accent mt-1" />
-                                <span><strong>DOT inspections & preventive maintenance</strong></span>
+                                <FaTire className="text-accent mt-1" />
+                                <span><strong>Wulkanizacja</strong> oraz serwis opon</span>
                             </li>
                         </ul>
 
                         <p className="text-muted leading-relaxed text-base">
-                            We offer <span className="font-medium text-accent">fast scheduling</span>, <span className="font-medium text-accent">competitive pricing</span>, and <span className="font-medium text-accent">honest service</span> — for fleet managers and owner-operators alike.
+                            <span className="font-medium text-accent">Szybko</span>, <span className="font-medium text-accent">fachowo</span> i <span className="font-medium text-accent">kompleksowo</span> — wszystko w jednym miejscu.
+                            {' '}Zadbaj o niezawodność swojej floty z pomocą naszego serwisu.
                         </p>
                     </motion.div>
                 </div>

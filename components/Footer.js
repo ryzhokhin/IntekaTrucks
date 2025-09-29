@@ -10,7 +10,7 @@ export default function Footer() {
                 <div>
                     <h3 className="text-2xl font-bold text-background mb-2">INTEKA</h3>
                     <p className="text-sm leading-relaxed text-muted">
-                        A trusted transport and logistics partner delivering fast, secure, and personalized freight solutions.
+                        Łączymy wieloletnie doświadczenie z elastycznym podejściem, oferując logistyke dopasowaną do Twoich potrzeb.
                     </p>
                     <p className="text-xs mt-6 text-muted">
                         &copy; {new Date().getFullYear()} INTEKA. All rights reserved.

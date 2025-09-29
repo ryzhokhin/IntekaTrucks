@@ -30,7 +30,7 @@ export default function Navbar() {
                     {/*    Testimonials*/}
                     {/*</a>*/}
                     <a href="#contact" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
-                        Contact
+                        Kontakt
                     </a>
                     <Link href="/services/#CTO" className="text-primary hover:text-accent font-medium text-sm sm:text-base">
                         Serwis

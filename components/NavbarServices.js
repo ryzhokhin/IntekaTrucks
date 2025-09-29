@@ -22,19 +22,19 @@ export default function NavbarServices() {
                 {/* Navigation */}
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                     <Link href="/" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
-                        Who we are
+                        Kim jesteśmy?
                     </Link>
                     <a href="#logistics" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
-                        Freight & Logistics Services
+                        Transport&Spedycja
                     </a>
                     <a href="#CTO" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
-                        CTO
+                        Serwis
                     </a>
                     <a
-                        href="tel:+13101234567"
+                        href="#contact"
                         className="bg-accent text-background font-semibold text-sm sm:text-base py-2 px-4 rounded-md hover:opacity-90 transition"
                     >
-                        📞 Call Now
+                        📞 Skontaktuj Sie Z Nami
                     </a>
                 </div>
             </div>

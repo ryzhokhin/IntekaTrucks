@@ -72,9 +72,9 @@ export default function ContactForm() {
 
                 {/* Right: Form */}
                 <div className="bg-background rounded-xl shadow-lg p-8 relative">
-                    <h2 className="text-3xl font-bold text-foreground mb-4">Request a Quote</h2>
+                    <h2 className="text-3xl font-bold text-foreground mb-4">Masz pytanie? Napisz do nas!</h2>
                     <p className="text-muted mb-6">
-                        Our team responds fast. Let us know your needs — we’ll handle the rest.
+                        Nasz zespół odpowiada szybko. Przekaż nam swoje potrzeby, a my zajmiemy się resztą.
                     </p>
 
                     <form onSubmit={handleSubmit} className="space-y-5 relative">
@@ -82,7 +82,7 @@ export default function ContactForm() {
                         <input
                             type="text"
                             name="name"
-                            placeholder="Your Name"
+                            placeholder="Twoje Imię i Nazwisko"
                             value={formData.name}
                             onChange={handleChange}
                             required
@@ -91,7 +91,7 @@ export default function ContactForm() {
                         <input
                             type="tel"
                             name="phone"
-                            placeholder="Phone Number"
+                            placeholder="Numer Telefonu"
                             value={formData.phone}
                             onChange={handleChange}
                             required
@@ -100,7 +100,7 @@ export default function ContactForm() {
                         <input
                             type="email"
                             name="email"
-                            placeholder="Email Address"
+                            placeholder="Adres E-mail"
                             value={formData.email}
                             onChange={handleChange}
                             required
@@ -109,7 +109,7 @@ export default function ContactForm() {
                         <textarea
                             name="message"
                             rows="4"
-                            placeholder="Your Message"
+                            placeholder="Twoja Wiadomość"
                             value={formData.message}
                             onChange={handleChange}
                             required

@@ -7,25 +7,25 @@ export default function ServicesOverview() {
             <div className="max-w-6xl mx-auto px-6 text-center">
                 <h2 className="text-3xl font-bold text-foreground mb-4">Nasza oferta</h2>
                 <p className="text-lg text-muted mb-12 max-w-3xl mx-auto">
-                    Our core services are designed to keep your cargo moving efficiently and safely — from international freight to real-time logistics and full truck diagnostics.
+                    Oferujemy kompleksowe rozwiązania transportowe, logistyczne i serwisowe — od przewozów międzynarodowych i przeładunków po pełną obsługę techniczną pojazdów. Działamy szybko, skutecznie i z indywidualnym podejściem do każdego zlecenia.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
                     {[
                         {
                             icon: <FaTruckMoving className="text-background text-4xl" />,
-                            title: "Freight Delivery",
-                            desc: "Local and international cargo transport using flatbeds, reefers, and heavy-duty trucks. Fast and dependable.",
+                            title: "Usługi Transportowe",
+                            desc: "Realizujemy przewozy na terenie Polski i całej Unii Europejskiej, oferując sprawdzone i elastyczne rozwiązania.",
                         },
                         {
                             icon: <FaRoute className="text-background text-4xl" />,
-                            title: "Logistics Planning",
-                            desc: "Route optimization, GPS tracking, and delivery scheduling with 24/7 driver-dispatch coordination.",
+                            title: "Przeładunki i Magazynowanie",
+                            desc: "Oferujemy szybki i bezpieczny przeładunek towarów na terenie naszej bazy w Bolesławcu. Sprawna obsługa i stała koordynacja z kierowcami gwarantują minimalne przestoje i pełną kontrolę nad ładunkiem.",
                         },
                         {
                             icon: <FaTools className="text-background text-4xl" />,
-                            title: "Truck Service (STO)",
-                            desc: "Diagnostics, Webasto repair, oil changes, suspension, wheel balancing & A/C systems — all in-house.",
+                            title: "Serwis i Obsługa Techniczna",
+                            desc: "Wykonujemy kompleksową obsługę pojazdów ciężarowych oraz osobowych  — od diagnostyki i napraw bieżących, po konserwację kluczowych systemów",
                         },
                     ].map((item, index) => (
                         <Link key={index} href="/services" className="group block cursor-pointer">
@@ -44,7 +44,7 @@ export default function ServicesOverview() {
                     href="/services"
                     className="inline-block bg-accent hover:opacity-90 text-background font-semibold py-3 px-6 rounded-lg transition"
                 >
-                    Learn More About Our Services
+                    Dowiedz Się Więcej
                 </Link>
             </div>
         </section>
