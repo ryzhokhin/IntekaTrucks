@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
-import { FaClipboardCheck, FaOilCan, FaRoad, FaTools, FaWrench, FaSnowflake, FaTire } from "react-icons/fa";
+import { FaClipboardCheck, FaOilCan, FaRoad, FaTools, FaWrench, FaSnowflake } from "react-icons/fa";
+import { PiTireFill } from "react-icons/pi";
 import Footer from "@/components/Footer";
 import NavbarServices from "@/components/NavbarServices";
 import { useEffect, useState } from "react";
@@ -158,7 +159,7 @@ export default function ServicesPage() {
                                 <span><strong>Serwis i naprawa</strong> układów klimatyzacji oraz Webasto</span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <FaTire className="text-accent mt-1" />
+                                <PiTireFill className="text-accent mt-1" />
                                 <span><strong>Wulkanizacja</strong> oraz serwis opon</span>
                             </li>
                         </ul>
