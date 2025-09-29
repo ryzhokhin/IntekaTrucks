@@ -133,9 +133,9 @@ export default function ServicesPage() {
                             Serwis i Obsługa
                         </h2>
 
-                        <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4">
-                            In-House Diagnostics & Repair Services
-                        </h3>
+                        {/*<h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4">*/}
+                        {/*    In-House Diagnostics & Repair Services*/}
+                        {/*</h3>*/}
 
                         <p className="text-muted mb-5 leading-relaxed text-base sm:text-lg">
                             Nasi <span className="font-medium text-accent">certyfikowani mechanicy</span> wykonują diagnostykę i naprawy pojazdów ciężarowych, <span className="text-accent font-medium">naczep oraz samochodów osobowych.</span>.
