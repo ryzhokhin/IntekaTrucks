@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <style>
+      .vw-circle { fill: #1f2937; }
+      .vw-text { fill: white; font-family: Arial, sans-serif; font-weight: bold; }
+    </style>
+  </defs>
+  
+  <!-- Outer circle -->
+  <circle cx="40" cy="40" r="35" class="vw-circle"/>
+  
+  <!-- V -->
+  <text x="40" y="32" class="vw-text" text-anchor="middle" font-size="24">V</text>
+  
+  <!-- W -->
+  <text x="40" y="52" class="vw-text" text-anchor="middle" font-size="24">W</text>
+</svg>

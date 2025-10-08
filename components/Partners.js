@@ -1,26 +1,27 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const partners = [
     {
         name: "BADER POLSKA",
         description: "Leading automotive supplier",
         category: "Automotive Industry",
-        logo: "/images/partners/bader-polska.png", // You can add actual logos later
+        logo: "/images/partners/bader-polska.svg",
         color: "#1e3a8a"
     },
     {
         name: "Volkswagen",
         description: "Global automotive manufacturer",
         category: "Automotive Industry", 
-        logo: "/images/partners/volkswagen.png",
+        logo: "/images/partners/volkswagen.svg",
         color: "#1f2937"
     },
     {
         name: "LG",
         description: "Technology and electronics leader",
         category: "Electronics & Technology",
-        logo: "/images/partners/lg.png",
+        logo: "/images/partners/lg.svg",
         color: "#dc2626"
     }
 ];
@@ -142,16 +143,19 @@ export default function Partners() {
                                     style={{ backgroundColor: partner.color }}
                                 />
                                 
-                                {/* Logo Placeholder */}
+                                {/* Company Logo */}
                                 <motion.div
                                     variants={logoVariants}
                                     className="mb-6 flex justify-center"
                                 >
-                                    <div 
-                                        className="w-20 h-20 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300"
-                                        style={{ backgroundColor: partner.color }}
-                                    >
-                                        {partner.name.charAt(0)}
+                                    <div className="w-24 h-24 rounded-xl flex items-center justify-center bg-white shadow-lg group-hover:scale-110 transition-transform duration-300 p-4">
+                                        <Image 
+                                            src={partner.logo} 
+                                            alt={`${partner.name} logo`}
+                                            width={80}
+                                            height={80}
+                                            className="max-w-full max-h-full object-contain"
+                                        />
                                     </div>
                                 </motion.div>
 
