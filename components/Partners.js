@@ -7,22 +7,22 @@ const partners = [
         name: "BADER POLSKA",
         description: "Leading automotive supplier",
         category: "Automotive Industry",
-        logo: "/images/partners/bader-polska.svg",
-        color: "#1e3a8a"
+        logo: "/images/Logo_Bader_Leather.svg",
+        color: "#928c49"
     },
     {
         name: "Volkswagen",
         description: "Global automotive manufacturer",
         category: "Automotive Industry", 
-        logo: "/images/partners/volkswagen.svg",
-        color: "#1f2937"
+        logo: "/images/Volkswagen_logo_2019.svg",
+        color: "#001e50"
     },
     {
         name: "LG",
         description: "Technology and electronics leader",
         category: "Electronics & Technology",
-        logo: "/images/partners/lg.svg",
-        color: "#dc2626"
+        logo: "/images/LG_logo_(2014).svg",
+        color: "#a50034"
     }
 ];
 
