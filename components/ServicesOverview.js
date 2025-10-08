@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { FaTruckMoving, FaRoute, FaTools } from "react-icons/fa";
+import {BiSolidPackage} from "react-icons/bi";
+
 
 export default function ServicesOverview() {
     return (
@@ -18,7 +20,7 @@ export default function ServicesOverview() {
                             desc: "Realizujemy przewozy na terenie Polski i całej Unii Europejskiej, oferując sprawdzone i elastyczne rozwiązania.",
                         },
                         {
-                            icon: <FaRoute className="text-background text-4xl" />,
+                            icon: <BiSolidPackage className="text-background text-4xl" />,
                             title: "Przeładunki i Magazynowanie",
                             desc: "Oferujemy szybki i bezpieczny przeładunek towarów na terenie naszej bazy w Bolesławcu. Sprawna obsługa i stała koordynacja z kierowcami gwarantują minimalne przestoje i pełną kontrolę nad ładunkiem.",
                         },

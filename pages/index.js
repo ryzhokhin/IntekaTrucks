@@ -4,7 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import ServicesOverview from "@/components/ServicesOverview";
-import Testimonials from "@/components/Testimonials";
+import Partners from "@/components/Partners";
 import ContactForm from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import HeroSplit from "@/components/HeroSplit";
@@ -83,7 +83,7 @@ export default function Home() {
                 <HeroSplit />
                 <About />
                 <ServicesOverview />
-                <Testimonials />
+                <Partners />
                 <ContactForm />
                 <Footer />
             </main>

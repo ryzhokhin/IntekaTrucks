@@ -18,19 +18,19 @@ export default function Footer() {
                 </div>
 
                 {/* Column 2: Navigation */}
-                <div>
-                    <h4 className="text-background font-semibold mb-3">Quick Links</h4>
-                    <ul className="space-y-2 text-sm text-muted">
-                        <li><Link href="/" className="hover:text-background transition">Home</Link></li>
-                        <li><Link href="/services" className="hover:text-background transition">Services</Link></li>
-                        <li><a href="#about" className="hover:text-background transition">About Us</a></li>
-                        <li><a href="#contact" className="hover:text-background transition">Contact</a></li>
-                    </ul>
-                </div>
+                {/*<div>*/}
+                {/*    <h4 className="text-background font-semibold mb-3">Quick Links</h4>*/}
+                {/*    <ul className="space-y-2 text-sm text-muted">*/}
+                {/*        <li><Link href="/" className="hover:text-background transition">Home</Link></li>*/}
+                {/*        <li><Link href="/services" className="hover:text-background transition">Services</Link></li>*/}
+                {/*        <li><a href="#about" className="hover:text-background transition">About Us</a></li>*/}
+                {/*        <li><a href="#contact" className="hover:text-background transition">Contact</a></li>*/}
+                {/*    </ul>*/}
+                {/*</div>*/}
 
                 {/* Column 3: Contact Info */}
                 <div>
-                    <h4 className="text-background font-semibold mb-3">Contact</h4>
+                    <h4 className="text-background font-semibold mb-3">Kontant</h4>
                     <ul className="text-sm space-y-2 text-muted">
                         <li>📍 Ul. Herberta 3A,
                             59-700 Boleslawiec</li>
@@ -41,12 +41,12 @@ export default function Footer() {
 
                 {/* Column 4: Social or CTA */}
                 <div>
-                    <h4 className="text-background font-semibold mb-3">Connect with Us</h4>
-                    <div className="flex space-x-4 text-muted">
-                        <a href="#" className="hover:text-background transition"><FaFacebookF /></a>
-                        <a href="#" className="hover:text-background transition"><FaLinkedinIn /></a>
-                        <a href="#" className="hover:text-background transition"><FaInstagram /></a>
-                    </div>
+                    {/*<h4 className="text-background font-semibold mb-3">Connect with Us</h4>*/}
+                    {/*<div className="flex space-x-4 text-muted">*/}
+                    {/*    <a href="#" className="hover:text-background transition"><FaFacebookF /></a>*/}
+                    {/*    <a href="#" className="hover:text-background transition"><FaLinkedinIn /></a>*/}
+                    {/*    <a href="#" className="hover:text-background transition"><FaInstagram /></a>*/}
+                    {/*</div>*/}
                     <Link
                         href="#contact"
                         className="inline-block mt-6 bg-accent hover:opacity-90 text-background text-sm font-semibold py-2 px-4 rounded transition"

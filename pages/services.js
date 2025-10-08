@@ -62,7 +62,7 @@ export default function ServicesPage() {
             <section className="bg-section py-24 px-6" id="logistics">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-12">
-                        Freight & Logistics Services
+                        Transport & Spedycja
                     </h2>
 
                     <div className="grid md:grid-cols-2 gap-10">
@@ -70,17 +70,17 @@ export default function ServicesPage() {
                         <div className="group relative overflow-hidden bg-background rounded-2xl shadow-lg p-8 transition hover:shadow-xl hover:-translate-y-1">
                             <div className="mb-4">
                                 <span className="inline-block bg-accent/10 text-accent text-xs font-semibold px-3 py-1 rounded-full">
-                                    National & International
+                                    Krajowy i międzynarodowy
                                 </span>
                             </div>
-                            <h3 className="text-2xl font-bold text-foreground mb-3">Freight Delivery</h3>
+                            <h3 className="text-2xl font-bold text-foreground mb-3">Transport</h3>
                             <p className="text-base sm:text-lg text-muted mb-4 leading-relaxed">
-                                {/*We handle transportation across the U.S. and to Eastern Europe — Ukraine, Belarus, and Russia — with a tailored approach to every cargo type and route.*/}
+                                Zapewniamy terminowy i bezpieczny przewóz ładunków na terenie Polski i całej Europy. Obsługujemy przesyłki całopojazdowe (FTL) oraz drobnicowe (LTL) dostosowane do indywidualnych potrzeb klientów.
                             </p>
                             <ul className="list-disc list-inside text-base text-muted space-y-1">
-                                {/*<li>Dry van, flatbed, reefer available</li>*/}
-                                {/*<li>Local and long-haul delivery</li>*/}
-                                {/*<li>Live GPS tracking & dispatch coordination</li>*/}
+                                <li>Nowoczesna flota</li>
+                                <li>Doświadczeni kierowcy</li>
+                                <li>Monitoring GPS 24/7</li>
                             </ul>
                             <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover:opacity-100 transition" />
                         </div>
@@ -89,17 +89,17 @@ export default function ServicesPage() {
                         <div className="group relative overflow-hidden bg-background rounded-2xl shadow-lg p-8 transition hover:shadow-xl hover:-translate-y-1">
                             <div className="mb-4">
                                 <span className="inline-block bg-secondary/10 text-secondary text-xs font-semibold px-3 py-1 rounded-full">
-                                    Smart Coordination
+                                    Sprawna i skuteczna obsługa logistyczna
                                 </span>
                             </div>
-                            <h3 className="text-2xl font-bold text-foreground mb-3">Logistics Planning</h3>
+                            <h3 className="text-2xl font-bold text-foreground mb-3">Spedycja</h3>
                             <p className="text-base sm:text-lg text-muted mb-4 leading-relaxed">
-                                We help businesses reduce costs and improve delivery timing with intelligent routing and real-time optimization.
+                                Nasze rozwiązania spedycyjne łączą technologię z doświadczeniem, aby zoptymalizować czas i koszty Twojego łańcucha dostaw. Koordynujemy cały proces – od załadunku po dostarczenie towaru.
                             </p>
                             <ul className="list-disc list-inside text-base text-muted space-y-1">
-                                <li>Route optimization tools</li>
-                                <li>Multi-drop delivery coordination</li>
-                                <li>Freight consolidation support</li>
+                                <li>Szybka organizacja transportu</li>
+                                <li>Obsługa dokumentów przewozowych i celnych</li>
+                                <li>Sieć sprawdzonych partnerów w UE</li>
                             </ul>
                             <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition" />
                         </div>

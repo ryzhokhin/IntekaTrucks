@@ -25,7 +25,7 @@ export default function NavbarServices() {
                         Kim jesteśmy?
                     </Link>
                     <a href="#logistics" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
-                        Transport&Spedycja
+                        Transport & Spedycja
                     </a>
                     <a href="#CTO" className="text-foreground hover:text-accent font-medium text-sm sm:text-base">
                         Serwis
