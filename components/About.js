@@ -16,7 +16,7 @@ export default function About() {
                 {/* Иконки карточек */}
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mb-10">
                     {[
-                        { icon: <FaAward className="text-accent text-4xl mb-3" />, label: "Ponad 10 lat doświadczenia" },
+                        { icon: <FaAward className="text-accent text-4xl mb-3" />, label: "Ponad 15 lat doświadczenia" },
                         { icon: <FaShieldAlt className="text-accent text-4xl mb-3" />, label: "Zaufany partner biznesowy" },
                         { icon: <FaUsers className="text-accent text-4xl mb-3" />, label: "Rodzinne przedsiębiorstwo" },
                     ].map((item, index) => (
