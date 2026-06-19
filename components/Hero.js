@@ -35,23 +35,23 @@ export default function Hero() {
 
             {/* Left Panel Content */}
             <div
-                className="relative z-10 h-full w-full md:w-1/2 bg-white flex flex-col justify-center px-6 sm:px-12 py-24">
-                <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                className="relative z-10 h-full w-full md:w-1/2 bg-background flex flex-col justify-center px-6 sm:px-12 py-24">
+                <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 leading-tight">
                     Freight & Logistics Solutions That Deliver
                 </h1>
-                <p className="text-lg text-gray-700 mb-8">
+                <p className="text-lg text-muted mb-8">
                     Since 2010 — Fast. Reliable. Customized to your business needs.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                     <a
                         href="tel:+13101234567"
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg text-center transition"
+                        className="bg-accent hover:bg-accent-dark text-background font-semibold py-3 px-6 rounded-lg text-center transition"
                     >
                         📞 Call
                     </a>
                     <a
                         href="#contact"
-                        className="border border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg text-center transition"
+                        className="border border-accent text-accent hover:bg-section font-semibold py-3 px-6 rounded-lg text-center transition"
                     >
                         📝 Get a quote
                     </a>

@@ -8,7 +8,7 @@ export default function About() {
             id="about"
         >
             {/* Полупрозрачный оверлей */}
-            <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-0" />
+            <div className="absolute inset-0 bg-background/70 backdrop-blur-sm z-0" />
 
             <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
                 <h2 className="text-3xl font-bold text-foreground mb-6">O Naszej Firmie</h2>
@@ -16,9 +16,9 @@ export default function About() {
                 {/* Иконки карточек */}
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mb-10">
                     {[
-                        { icon: <FaAward className="text-primary text-4xl mb-3" />, label: "Ponad 10 lat doświadczenia" },
-                        { icon: <FaShieldAlt className="text-primary text-4xl mb-3" />, label: "Zaufany partner biznesowy" },
-                        { icon: <FaUsers className="text-primary text-4xl mb-3" />, label: "Rodzinne przedsiębiorstwo" },
+                        { icon: <FaAward className="text-accent text-4xl mb-3" />, label: "Ponad 10 lat doświadczenia" },
+                        { icon: <FaShieldAlt className="text-accent text-4xl mb-3" />, label: "Zaufany partner biznesowy" },
+                        { icon: <FaUsers className="text-accent text-4xl mb-3" />, label: "Rodzinne przedsiębiorstwo" },
                     ].map((item, index) => (
                         <div
                             key={index}
@@ -31,7 +31,7 @@ export default function About() {
                 </div>
 
                 {/* Описание */}
-                <div className="max-w-2xl mx-auto text-gray-700 text-lg leading-relaxed space-y-3">
+                <div className="max-w-2xl mx-auto text-muted text-lg leading-relaxed space-y-3">
                     <p>
                         Nasza firma transportowa istnieje na rynku od 2011 roku.
                     </p>

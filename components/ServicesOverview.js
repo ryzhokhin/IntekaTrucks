@@ -44,7 +44,7 @@ export default function ServicesOverview() {
 
                 <Link
                     href="/services"
-                    className="inline-block bg-accent hover:opacity-90 text-background font-semibold py-3 px-6 rounded-lg transition"
+                    className="inline-block bg-accent hover:bg-accent-dark text-background font-semibold py-3 px-6 rounded-lg transition"
                 >
                     Dowiedz Się Więcej
                 </Link>

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import LogoInteka from "../public/images/inteka-logo-1.svg"
 
 export default function Navbar() {
     return (
@@ -8,10 +7,10 @@ export default function Navbar() {
             <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center px-6 py-3 sm:py-4">
 
                 {/* Logo Image */}
-                <div className="relative h-16 w-[200px] sm:h-20 sm:w-[240px]">
+                <div className="relative h-14 w-[220px] sm:h-16 sm:w-[260px]">
                     <Image
-                        src="/images/inteka-logo-2-ugol.svg"
-                        alt="INTEKA Logo"
+                        src="/images/logo_final.jpg"
+                        alt="INTEKA Transportation & Logistics"
                         fill
                         className="object-contain"
                         priority
@@ -40,7 +39,7 @@ export default function Navbar() {
                     </Link>
                     <a
                         href="#contact"
-                        className="bg-accent text-background font-semibold text-sm sm:text-base py-2 px-4 rounded-md hover:opacity-90 transition"
+                        className="bg-accent text-background font-semibold text-sm sm:text-base py-2 px-4 rounded-md hover:bg-accent-dark transition"
                     >
                         📞 Skontaktuj Sie Z Nami
                     </a>

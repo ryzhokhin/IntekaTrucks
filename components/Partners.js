@@ -83,7 +83,7 @@ export default function Partners() {
 
     return (
         <section
-            className="relative bg-gradient-to-br from-gray-50 to-gray-100 py-20 scroll-mt-24"
+            className="relative bg-section py-20 scroll-mt-24"
             id="partners"
         >
             {/* Background Pattern */}
@@ -103,7 +103,7 @@ export default function Partners() {
                     className="text-center mb-16"
                 >
                     <motion.h2 
-                        className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+                        className="text-4xl md:text-5xl font-bold text-foreground mb-4"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
@@ -112,7 +112,7 @@ export default function Partners() {
                         Who We Work With
                     </motion.h2>
                     <motion.p 
-                        className="text-xl text-gray-600 max-w-3xl mx-auto"
+                        className="text-xl text-muted max-w-3xl mx-auto"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
@@ -136,7 +136,7 @@ export default function Partners() {
                             className="group relative"
                         >
                             {/* Card */}
-                            <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                            <div className="relative bg-background rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-section overflow-hidden">
                                 {/* Gradient Overlay */}
                                 <div 
                                     className="absolute top-0 left-0 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -148,7 +148,7 @@ export default function Partners() {
                                     variants={logoVariants}
                                     className="mb-6 flex justify-center"
                                 >
-                                    <div className="w-24 h-24 rounded-xl flex items-center justify-center bg-white shadow-lg group-hover:scale-110 transition-transform duration-300 p-4">
+                                    <div className="w-24 h-24 rounded-xl flex items-center justify-center bg-background shadow-lg group-hover:scale-110 transition-transform duration-300 p-4">
                                         <Image 
                                             src={partner.logo} 
                                             alt={`${partner.name} logo`}
@@ -161,10 +161,10 @@ export default function Partners() {
 
                                 {/* Content */}
                                 <div className="text-center">
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                                    <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
                                         {partner.name}
                                     </h3>
-                                    <p className="text-gray-600 mb-3">
+                                    <p className="text-muted mb-3">
                                         {partner.description}
                                     </p>
                                     <span 
@@ -176,7 +176,7 @@ export default function Partners() {
                                 </div>
 
                                 {/* Hover Effect */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -skew-x-12 translate-x-full group-hover:translate-x-[-100%] transition-transform duration-1000" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-background/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -skew-x-12 translate-x-full group-hover:translate-x-[-100%] transition-transform duration-1000" />
                             </div>
                         </motion.div>
                     ))}
@@ -190,16 +190,16 @@ export default function Partners() {
                     viewport={{ once: true }}
                     className="text-center mt-16"
                 >
-                    <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-2xl mx-auto">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    <div className="bg-background rounded-2xl p-8 shadow-lg border border-section max-w-2xl mx-auto">
+                        <h3 className="text-2xl font-bold text-foreground mb-4">
                             Join Our Network of Trusted Partners
                         </h3>
-                        <p className="text-gray-600 mb-6">
+                        <p className="text-muted mb-6">
                             Ready to experience the same level of service and reliability that industry leaders trust?
                         </p>
                         <motion.a
                             href="#contact"
-                            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
+                            className="inline-block bg-accent hover:bg-accent-dark text-background font-semibold py-3 px-8 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >

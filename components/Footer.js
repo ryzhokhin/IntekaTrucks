@@ -9,10 +9,10 @@ export default function Footer() {
                 {/* Column 1: Logo & Tagline */}
                 <div>
                     <h3 className="text-2xl font-bold text-background mb-2">INTEKA</h3>
-                    <p className="text-sm leading-relaxed text-muted">
+                    <p className="text-sm leading-relaxed text-background/70">
                         Łączymy wieloletnie doświadczenie z elastycznym podejściem, oferując logistyke dopasowaną do Twoich potrzeb.
                     </p>
-                    <p className="text-xs mt-6 text-muted">
+                    <p className="text-xs mt-6 text-background/60">
                         &copy; {new Date().getFullYear()} INTEKA. All rights reserved.
                     </p>
                 </div>
@@ -31,7 +31,7 @@ export default function Footer() {
                 {/* Column 3: Contact Info */}
                 <div>
                     <h4 className="text-background font-semibold mb-3">Kontant</h4>
-                    <ul className="text-sm space-y-2 text-muted">
+                    <ul className="text-sm space-y-2 text-background/70">
                         <li>📍 Ul. Herberta 3A,
                             59-700 Boleslawiec</li>
                         {/*<li>📞 +1 (310) 123-4567</li>*/}
@@ -49,7 +49,7 @@ export default function Footer() {
                     {/*</div>*/}
                     <Link
                         href="#contact"
-                        className="inline-block mt-6 bg-accent hover:opacity-90 text-background text-sm font-semibold py-2 px-4 rounded transition"
+                        className="inline-block mt-6 bg-accent hover:bg-accent-dark text-background text-sm font-semibold py-2 px-4 rounded transition"
                     >
                         Request a Quote
                     </Link>

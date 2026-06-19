@@ -1,100 +1,31 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/*
+ * INTEKA — Transportation & Logistics
+ * Brand color system (single source of truth).
+ * Palette derived from the logo: deep navy + energetic orange.
+ * Components must consume these tokens (bg-primary, text-accent, ...)
+ * instead of hardcoded Tailwind palette colors.
+ */
 @theme {
-    --color-primary: #1e3a8a;
-    --color-secondary: #3b82f6;
-    --color-accent: #e11d48;
-    --color-muted: #6b7280;
-    --color-background: #ffffff;
-    --color-section: #f9fafb;
-    --color-foreground: #171717;
+    /* Brand */
+    --color-primary: #16294c;        /* Navy — wordmark, headings, footer */
+    --color-primary-dark: #0f1d38;   /* Deeper navy — depth / hover */
+    --color-secondary: #33598c;      /* Steel blue — links, gradients */
+    --color-accent: #f26c21;         /* Orange — CTAs, highlights, icons */
+    --color-accent-dark: #d55b14;    /* Orange — hover */
+
+    /* Neutrals & surfaces */
+    --color-muted: #5b6678;          /* Slate — secondary text */
+    --color-background: #ffffff;     /* Page & card surfaces */
+    --color-section: #f3f6fb;        /* Alternating section background */
+    --color-foreground: #16294c;     /* Primary text (navy, on-brand) */
 }
 
-@layer base {
-    [data-theme='first-choice']{
-        --color-primary: #1e3a8a;
-        --color-secondary: #3b82f6;
-        --color-accent: #1e3a8a;
-        --color-muted: #6b7280;
-        --color-background: #ffffff;
-        --color-section: #f9fafb;
-        --color-foreground: #171717;
-    }
-    [data-theme='navy-sand'] {
-        --color-primary: #0f172a;
-        --color-secondary: #facc15;
-        --color-accent: #eab308;
-        --color-muted: #64748b;
-        --color-background: #f9fafb;
-        --color-section: #f3f4f6;
-        --color-foreground: #1e293b;
-    }
-    [data-theme='cool-gray-sky'] {
-        --color-primary: #334155;
-        --color-secondary: #38bdf8;
-        --color-accent: #0ea5e9;
-        --color-muted: #94a3b8;
-        --color-background: #f8fafc;
-        --color-section: #e2e8f0;
-        --color-foreground: #0f172a;
-    }
-    [data-theme='cargo-olive-asphalt'] {
-        --color-primary: #374151;
-        --color-secondary: #d1fae5;
-        --color-accent: #65a30d;
-        --color-muted: #9ca3af;
-        --color-background: #fefce8;
-        --color-section: #f3f4f6;
-        --color-foreground: #1f2937;
-    }
-    [data-theme='sunset-freight'] {
-        --color-primary: #1e293b;
-        --color-secondary: #fcd34d;
-        --color-accent: #fb923c;
-        --color-muted: #cbd5e1;
-        --color-background: #fff7ed;
-        --color-section: #fef3c7;
-        --color-foreground: #111827;
-    }
-    [data-theme='midnight-emerald'] {
-        --color-primary: #0f172a;
-        --color-secondary: #10b981;
-        --color-accent: #22d3ee;
-        --color-muted: #64748b;
-        --color-background: #020617;
-        --color-section: #1e293b;
-        --color-foreground: #f1f5f9;
-    }
-    [data-theme='eco-green'] {
-        --color-primary: #14532d;       /* Тёмно-зелёный */
-        --color-secondary: #22c55e;     /* Лайм зелёный */
-        --color-accent: #facc15;        /* Жёлтый */
-        --color-muted: #64748b;         /* Слейт */
-        --color-background: #f0fdf4;    /* Светло-зелёный фон */
-        --color-section: #ecfdf5;       /* Ещё мягче секции */
-        --color-foreground: #1f2937;    /* Тёмно-серый текст */
-    }
-    [data-theme='premium-blue'] {
-        --color-primary: #0f172a;       /* Тёмно-синий */
-        --color-secondary: #3b82f6;     /* Акцент */
-        --color-accent: #073260;        /* Голубой CTA */
-        --color-muted: #9ca3af;         /* Серый */
-        --color-background: #f8fafc;    /* Холодный белый */
-        --color-section: #e2e8f0;       /* Светло-серый */
-        --color-foreground: #0f172a;    /* Основной текст */
-    }
-}
-
-
-
-/* === Base Styling === */
+/* === Base styling === */
 body {
-    background-color: rgb(var(--color-background));
-    color: rgb(var(--color-foreground));
+    background-color: var(--color-background);
+    color: var(--color-foreground);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -102,8 +33,9 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Slick carousel arrows follow the brand navy */
 .slick-prev:before,
 .slick-next:before {
-    color: #1e293b !important;
+    color: var(--color-primary) !important;
     font-size: 32px;
 }

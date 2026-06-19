@@ -53,12 +53,12 @@ export default function Testimonials() {
 
     return (
         <section
-            className="relative bg-gray-100 bg-cover bg-center bg-no-repeat py-16 scroll-mt-24"
+            className="relative bg-section bg-cover bg-center bg-no-repeat py-16 scroll-mt-24"
             style={{ backgroundImage: "url('/images/testimonial-bg-1.jpg')" }} // replace with your image
             id="testimonials"
         >
             {/* Semi-transparent white overlay */}
-            <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-0" />
+            <div className="absolute inset-0 bg-background/70 backdrop-blur-sm z-0" />
 
             <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
                 <motion.div
@@ -67,8 +67,8 @@ export default function Testimonials() {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-                    <p className="text-lg text-gray-700 mb-10">
+                    <h2 className="text-3xl font-bold text-foreground mb-4">What Our Clients Say</h2>
+                    <p className="text-lg text-muted mb-10">
                         Trusted by small businesses and enterprise clients alike.
                     </p>
                 </motion.div>
@@ -82,14 +82,14 @@ export default function Testimonials() {
                     <Slider {...settings}>
                         {reviews.map((review, index) => (
                             <div key={index} className="px-3">
-                                <div className="bg-white max-w-sm mx-auto p-8 rounded-xl shadow-md text-center transition transform hover:scale-[1.02]">
+                                <div className="bg-background max-w-sm mx-auto p-8 rounded-xl shadow-md text-center transition transform hover:scale-[1.02]">
                                     <div className="flex justify-center mb-4">
                                         {[...Array(review.rating)].map((_, i) => (
-                                            <FaStar key={i} className="text-yellow-400" />
+                                            <FaStar key={i} className="text-accent" />
                                         ))}
                                     </div>
-                                    <p className="text-gray-800 italic mb-6">“{review.quote}”</p>
-                                    <p className="text-gray-900 font-semibold">
+                                    <p className="text-foreground italic mb-6">“{review.quote}”</p>
+                                    <p className="text-foreground font-semibold">
                                         — {review.author}, {review.title}
                                     </p>
                                 </div>

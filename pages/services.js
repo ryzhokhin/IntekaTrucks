@@ -5,16 +5,9 @@ import { FaClipboardCheck, FaOilCan, FaRoad, FaTools, FaWrench, FaSnowflake } fr
 import { PiTireFill } from "react-icons/pi";
 import Footer from "@/components/Footer";
 import NavbarServices from "@/components/NavbarServices";
-import { useEffect, useState } from "react";
 import ContactForm from "@/components/ContactForm";
 
 export default function ServicesPage() {
-    const [theme, setTheme] = useState("first-choice");
-
-    useEffect(() => {
-        document.documentElement.setAttribute("data-theme", theme);
-    }, [theme]);
-
     return (
         <main className="bg-background text-foreground">
             <NavbarServices />
