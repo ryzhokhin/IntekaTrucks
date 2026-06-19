@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Keep this tool out of search engines if it ever gets served somewhere. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>INTEKA — Email Signature Builder (internal)</title>
+  <!--
+    ==========================================================================
+    INTEKA Transportation & Logistics — Email Signature Builder (INTERNAL TOOL)
+    ==========================================================================
+    PRIVACY / ACCESS
+    - This file lives at the PROJECT ROOT (not in /public), so Vercel does NOT
+      deploy it. It is NOT reachable at https://inteka.pl/email-signature.html.
+    - Open it locally instead:  double-click the file, or run `npm run dev` and
+      open the file directly in your browser (file:// works fine too).
+
+    HOW IT WORKS
+    - Fill in the fields on the left. The preview on the right updates live.
+    - Click "Copy signature" and paste into Outlook (Ctrl/Cmd + V).
+    - The COPIED signature is plain table-based HTML with INLINE styles only
+      (no JS, no external CSS) so it renders in Outlook / Gmail / Apple Mail.
+    - The JavaScript here only powers this builder; it is NOT copied.
+
+    LOGO IMAGE URL (already hosted & verified):
+        https://inteka.pl/images/logo_final.jpg
+    ==========================================================================
+  -->
+  <style>
+    /* Builder UI styling only — NOT part of the copied signature. */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 24px;
+      background: #f3f6fb;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #16294c;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    h1 { font-size: 22px; margin: 0 0 4px; }
+    .sub { font-size: 13px; color: #5b6678; margin: 0 0 20px; }
+    .grid { display: grid; grid-template-columns: 360px 1fr; gap: 24px; align-items: start; }
+    @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+
+    .card {
+      background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+      padding: 22px; box-shadow: 0 4px 14px rgba(22,41,76,.06);
+    }
+    .card h2 { font-size: 14px; margin: 0 0 14px; color: #f26c21; text-transform: uppercase; letter-spacing: .04em; }
+
+    label { display: block; font-size: 12px; font-weight: bold; color: #5b6678; margin: 12px 0 4px; }
+    label:first-of-type { margin-top: 0; }
+    input {
+      width: 100%; padding: 9px 11px; font-size: 13px; color: #16294c;
+      border: 1px solid #cbd5e1; border-radius: 7px; font-family: inherit;
+    }
+    input:focus { outline: none; border-color: #f26c21; box-shadow: 0 0 0 3px rgba(242,108,33,.15); }
+
+    .actions { margin-top: 18px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      appearance: none; border: 0; cursor: pointer;
+      background: #f26c21; color: #fff; font-weight: bold; font-size: 13px;
+      padding: 11px 18px; border-radius: 8px; font-family: inherit;
+      transition: background .15s ease;
+    }
+    .btn:hover { background: #d55b14; }
+    .btn.secondary { background: #16294c; }
+    .btn.secondary:hover { background: #0f1d38; }
+    .status { font-size: 12px; font-weight: bold; color: #15803d; min-height: 16px; }
+
+    .preview-hint { font-size: 12px; color: #5b6678; margin: 0 0 10px; }
+    .preview-box {
+      background: #fff; border: 2px dashed #f26c21; border-radius: 12px;
+      padding: 26px; overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>INTEKA — Email Signature Builder</h1>
+    <p class="sub">Internal tool (not published). Fill in the fields, click <strong>Copy signature</strong>, then paste into your Outlook signature settings.</p>
+
+    <div class="grid">
+      <!-- ============ FORM ============ -->
+      <div class="card">
+        <h2>Your details</h2>
+
+        <label for="f-name">Name</label>
+        <input id="f-name" type="text" value="Jan Kowalski" />
+
+        <label for="f-position">Position</label>
+        <input id="f-position" type="text" value="Dyspozytor / Dispatcher" />
+
+        <label for="f-company">Company</label>
+        <input id="f-company" type="text" value="INTEKA Transportation & Logistics" />
+
+        <label for="f-mc">MC Number</label>
+        <input id="f-mc" type="text" value="123456" />
+
+        <label for="f-usdot">USDOT Number</label>
+        <input id="f-usdot" type="text" value="7654321" />
+
+        <label for="f-phone">Phone</label>
+        <input id="f-phone" type="text" value="+48 123 456 789" />
+
+        <label for="f-email">Email</label>
+        <input id="f-email" type="text" value="biuro@inteka.pl" />
+
+        <label for="f-website">Website</label>
+        <input id="f-website" type="text" value="https://inteka.pl" />
+
+        <label for="f-address">Address</label>
+        <input id="f-address" type="text" value="Ul. Herberta 3A, 59-700 Bolesławiec" />
+
+        <div class="actions">
+          <button class="btn" type="button" onclick="copySignature()">Copy signature</button>
+          <button class="btn secondary" type="button" onclick="resetFields()">Reset</button>
+          <span id="status" class="status"></span>
+        </div>
+      </div>
+
+      <!-- ============ LIVE PREVIEW ============ -->
+      <div>
+        <p class="preview-hint">Live preview — this is exactly what gets copied:</p>
+        <div class="preview-box">
+
+          <!-- ===== SIGNATURE (inline styles only) ===== -->
+          <table id="signature" role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:Arial, Helvetica, sans-serif;">
+            <tr>
+              <td style="padding:0 18px 0 0; vertical-align:middle;">
+                <a href="https://inteka.pl" target="_blank" style="text-decoration:none;">
+                  <img src="https://inteka.pl/images/logo_final.jpg" alt="INTEKA Transportation &amp; Logistics" width="190" style="display:block; width:190px; max-width:190px; height:auto; border:0; outline:none; text-decoration:none;" />
+                </a>
+              </td>
+              <td style="padding:0; vertical-align:middle; border-left:3px solid #f26c21; font-size:0; line-height:0;">&nbsp;</td>
+              <td style="padding:2px 0 2px 18px; vertical-align:middle;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:Arial, Helvetica, sans-serif;">
+                  <tr>
+                    <td style="font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:bold; color:#16294c; line-height:1.2; padding-bottom:2px;"><span id="sig-name">Jan Kowalski</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#5b6678; line-height:1.3; padding-bottom:2px;"><span id="sig-position">Dyspozytor / Dispatcher</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#f26c21; line-height:1.3; padding-bottom:9px;"><span id="sig-company">INTEKA Transportation &amp; Logistics</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#16294c; line-height:1.4; padding-bottom:7px;">
+                      <span style="color:#5b6678; font-weight:bold;">MC#</span> <span id="sig-mc">123456</span>
+                      &nbsp;<span style="color:#c7cedb;">|</span>&nbsp;
+                      <span style="color:#5b6678; font-weight:bold;">USDOT#</span> <span id="sig-usdot">7654321</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#16294c; line-height:1.5; padding-bottom:2px;">
+                      <span style="color:#f26c21; font-weight:bold;">P:</span>
+                      <a id="sig-phone" href="tel:+48123456789" style="color:#16294c; text-decoration:none;">+48 123 456 789</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#16294c; line-height:1.5; padding-bottom:2px;">
+                      <span style="color:#f26c21; font-weight:bold;">E:</span>
+                      <a id="sig-email" href="mailto:biuro@inteka.pl" style="color:#16294c; text-decoration:none;">biuro@inteka.pl</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#16294c; line-height:1.5; padding-bottom:2px;">
+                      <span style="color:#f26c21; font-weight:bold;">W:</span>
+                      <a id="sig-website" href="https://inteka.pl" target="_blank" style="color:#16294c; text-decoration:none;">https://inteka.pl</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#16294c; line-height:1.5;">
+                      <span style="color:#f26c21; font-weight:bold;">A:</span> <span id="sig-address">Ul. Herberta 3A, 59-700 Bolesławiec</span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3" style="padding-top:12px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">
+                  <tr>
+                    <td style="border-top:1px solid #e2e8f0; padding-top:8px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#5b6678; line-height:1.4;">
+                      Transportation &amp; Logistics &nbsp;•&nbsp; This message and any attachments are confidential and intended solely for the addressee.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- ===== END SIGNATURE ===== -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Builder logic only — never copied into the signature.
+    var DEFAULTS = {
+      name: "Jan Kowalski",
+      position: "Dyspozytor / Dispatcher",
+      company: "INTEKA Transportation & Logistics",
+      mc: "123456",
+      usdot: "7654321",
+      phone: "+48 123 456 789",
+      email: "biuro@inteka.pl",
+      website: "https://inteka.pl",
+      address: "Ul. Herberta 3A, 59-700 Bolesławiec"
+    };
+
+    function $(id) { return document.getElementById(id); }
+    function telHref(v) { return "tel:" + v.replace(/[^0-9+]/g, ""); }
+    function webHref(v) { return /^https?:\/\//i.test(v) ? v : "https://" + v; }
+
+    function render() {
+      $("sig-name").textContent     = $("f-name").value;
+      $("sig-position").textContent = $("f-position").value;
+      $("sig-company").textContent  = $("f-company").value;
+      $("sig-mc").textContent       = $("f-mc").value;
+      $("sig-usdot").textContent    = $("f-usdot").value;
+
+      var phone = $("f-phone").value;
+      $("sig-phone").textContent = phone;
+      $("sig-phone").setAttribute("href", telHref(phone));
+
+      var email = $("f-email").value;
+      $("sig-email").textContent = email;
+      $("sig-email").setAttribute("href", "mailto:" + email);
+
+      var web = $("f-website").value;
+      $("sig-website").textContent = web;
+      $("sig-website").setAttribute("href", webHref(web));
+
+      $("sig-address").textContent = $("f-address").value;
+    }
+
+    function showStatus(msg, ok) {
+      var el = $("status");
+      el.textContent = msg;
+      el.style.color = ok === false ? "#b91c1c" : "#15803d";
+      if (msg) setTimeout(function () { el.textContent = ""; }, 4000);
+    }
+
+    function copySignature() {
+      var sig = $("signature");
+      var range = document.createRange();
+      range.selectNode(sig);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      try {
+        var ok = document.execCommand("copy");
+        showStatus(ok ? "Copied! Now paste into Outlook (Ctrl/Cmd + V)." : "Copy failed — select the box manually.", ok);
+      } catch (e) {
+        showStatus("Copy failed — select the box manually and copy.", false);
+      }
+      sel.removeAllRanges();
+    }
+
+    function resetFields() {
+      $("f-name").value = DEFAULTS.name;
+      $("f-position").value = DEFAULTS.position;
+      $("f-company").value = DEFAULTS.company;
+      $("f-mc").value = DEFAULTS.mc;
+      $("f-usdot").value = DEFAULTS.usdot;
+      $("f-phone").value = DEFAULTS.phone;
+      $("f-email").value = DEFAULTS.email;
+      $("f-website").value = DEFAULTS.website;
+      $("f-address").value = DEFAULTS.address;
+      render();
+      showStatus("Reset to defaults.");
+    }
+
+    // Wire up live updates.
+    ["f-name","f-position","f-company","f-mc","f-usdot","f-phone","f-email","f-website","f-address"]
+      .forEach(function (id) { $(id).addEventListener("input", render); });
+
+    render();
+  </script>
+</body>
+</html>

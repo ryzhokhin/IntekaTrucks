@@ -29,19 +29,24 @@ and defined as design tokens in `styles/globals.css` (`@theme`):
 3. The Outlook signature image **must** point at this hosted URL. Do **not** use
    `raw.githubusercontent.com`, local file paths, or base64.
 
-### Email signature (Outlook / Gmail / Apple Mail)
+### Email signature builder (Outlook / Gmail / Apple Mail)
 
-- The ready-to-copy signature is `public/email-signature.html`, also served at
-  `https://inteka.pl/email-signature.html` after deployment.
-- It uses table-based HTML with inline styles only (no external CSS, no JS, no
-  base64), which is what email clients render reliably.
+- The signature builder is **`email-signature.html` at the project root**.
+- It lives outside `public/` **on purpose**: Vercel only deploys `public/` and
+  built pages, so this file is **not published** and is **not** reachable at
+  `https://inteka.pl/email-signature.html`. It is an internal/local tool.
+- The signature it produces is table-based HTML with inline styles only (no
+  external CSS, no JS, no base64) — what email clients render reliably. The
+  builder's own JavaScript just fills the fields and copies; it is not copied
+  into the signature.
 
-**Copy it into Outlook desktop:**
+**Use it:**
 
-1. Open `public/email-signature.html` in a browser.
-2. Fill in the `[placeholders]` (Name, Position, Company, MC#, USDOT#, Phone,
-   Email, Website, Address).
-3. Select everything inside the dashed orange box and copy (`Ctrl/Cmd + C`).
+1. Open `email-signature.html` locally (double-click it, or open the file in your
+   browser — `file://` works; it loads the logo from the live `inteka.pl` URL).
+2. Fill in the fields (Name, Position, Company, MC#, USDOT#, Phone, Email,
+   Website, Address). The preview updates live.
+3. Click **Copy signature**.
 4. Outlook → *File ▸ Options ▸ Mail ▸ Signatures* → create a new signature →
    paste (`Ctrl/Cmd + V`) → Save.
 
